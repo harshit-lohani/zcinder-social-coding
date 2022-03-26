@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './InputForm.css'
 
 function InputForm() {
   const [username,setUserName] = useState("") ; 
@@ -29,30 +30,35 @@ function InputForm() {
 
   return (
     <React.Fragment>
-    <div className='container'>
-    <form onSubmit={submitHandler}>
-        <h1>Complete your profile</h1>
-        <div className='form'>
-        <div className='field'>
-            <label>Username</label>
-            <input type='text' name='username' placeholder='username' value={username} onChange={userChangeHandler}/>
+      <div class="flex-container">
+        <div className='form-container'>
+          <form onSubmit={submitHandler}>
+              <h1 className='form-title'>Complete your profile</h1>
+              <div className='form'>
+              <div className='field'>
+                  <label>Username</label>
+                  <input type='text' name='username' placeholder='username' value={username} onChange={userChangeHandler}/>
+              </div>
+              <div className='field'>
+                  <label>Github handle</label>
+                  <input type='text' name='github-handle' placeholder='github-handle' value={git_handle} onChange={gitChangeHandler}/>
+              </div>
+              <div className='field'>
+                  <label>Leetcode handle</label>
+                  <input type='text' name='leet-handle' placeholder='leetcode-handle' value={leet_handle} onChange={leetChangeHandler}/>
+              </div>
+              <div className='field'>
+                  <label>Interviewbit Handle</label>
+                  <input type='text' name='ib-handle' placeholder='interviewbit-handle' value={ib_handle} onChange={ibChangeHandler}/>
+              </div>
+              <button className='form-button'>Submit</button>
+              </div>
+          </form>
         </div>
-        <div className='field'>
-            <label>Github handle</label>
-            <input type='text' name='github-handle' placeholder='github-handle' value={git_handle} onChange={gitChangeHandler}/>
+        <div className='img-container'>
+          <img src="https://i.ibb.co/Z1ymcj6/undraw-Scooter-re-lrsb.png"></img>
         </div>
-        <div className='field'>
-            <label>Leetcode handle</label>
-            <input type='text' name='leet-handle' placeholder='leetcode-handle' value={leet_handle} onChange={leetChangeHandler}/>
-        </div>
-        <div className='field'>
-            <label>Interviewbit Handle</label>
-            <input type='text' name='ib-handle' placeholder='interviewbit-handle' value={ib_handle} onChange={ibChangeHandler}/>
-        </div>
-        <button className='form-button'>Submit</button>
-        </div>
-    </form>
-    </div>
+      </div>
     </React.Fragment>
   )
 }
