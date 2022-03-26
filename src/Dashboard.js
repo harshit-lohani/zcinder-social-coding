@@ -5,6 +5,7 @@ import InputForm from './components/InputForm/InputForm';
 function Dashboard() {
   const location = useLocation(); 
   const {emailID,isNew} = location.state  
+
     return (
     <React.Fragment>
       <div>Navbar</div>
