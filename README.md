@@ -3,7 +3,7 @@ Social Coding for Hackathon
 
 
 # Team Members
-Harshit Lohani
-Anuj Milind Gore
-Harshal Abhyankar
-Ishan Garg
+Harshit Lohani  
+Anuj Milind Gore  
+Harshal Abhyankar  
+Ishan Garg  
