@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 var Codeforces = require('../node_modules/codeforces-api');
 // var env = require('env');
 
@@ -20,3 +21,31 @@ Codeforces.user.status(parameters, function (err,data) {
 
 //user.status to return all the submissions of user
 //user.rating will return user rating + the details of contest he has participated in
+=======
+import { useState } from 'react';
+
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
+class CodeForcesData{
+ codeforces(handle) {
+    var obj={};
+    let url = "https://competitive-coding-api.herokuapp.com/api/codeforces/ishangarg09";
+    let settings = { method: "Get" };
+    var rat;
+
+    fetch(url, settings)
+        .then(res => res.json())
+        .then((json) => {
+            obj=json;
+        });
+    return obj;
+
+  }
+}
+
+
+
+
+
+export default new CodeForcesData();
+>>>>>>> Stashed changes
