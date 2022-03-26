@@ -1,5 +1,8 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import DashNav from './components/DashNav'
+import Sidebar from './components/NavSidebar'
+import './dashboard.css'
 import leetcode from './leetcode'
 // import output from './github'
 import interviewbit from './interviewbit'
@@ -11,15 +14,22 @@ import interviewbit from './interviewbit'
   
 // }
 
-
-
 function Dashboard() {
   let obj = leetcode('ishangarg');
 
   console.log(obj);
   // leetcode('ishangarg');
     return (
-    <div>Dashboard</div>
+        <div>
+            <div>Dashboard</div>
+            <div className='main'>
+                
+                <div className='dashnav'>
+                    <DashNav/>
+                 </div>
+            </div>
+    
+        </div>
   )
 }
 
