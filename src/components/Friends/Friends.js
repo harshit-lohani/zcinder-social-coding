@@ -5,8 +5,13 @@ import "./Friends.css"
 function Friends() {
   return (
     <div className='friend_container'>
-        <Friend />
-        <Friend />
+        <div className='friend-header'>
+          Friends (415)
+        </div>
+        <div className="friend-list">
+          <Friend />
+          <Friend />
+        </div>
     </div>
   )
 }
