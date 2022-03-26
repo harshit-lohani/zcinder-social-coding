@@ -1,6 +1,11 @@
 import React from 'react'
+
 import {useLocation} from 'react-router-dom'
 import InputForm from './components/InputForm/InputForm';
+import leetcode from './leetcode'
+import interviewbit from './interviewbit'
+import codeforces from './codeforces'
+import github from './github'
 
 function Dashboard() {
   const location = useLocation(); 
@@ -15,5 +20,7 @@ function Dashboard() {
     </React.Fragment>
   )
 }
+
+
 
 export default Dashboard

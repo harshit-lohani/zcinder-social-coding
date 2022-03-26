@@ -1,9 +1,9 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-async function codeforces(handle) {
+async function interviewbit(handle) {
 
 
-    let url = 'https://competitive-coding-api.herokuapp.com/api/codeforces/';
+    let url = 'https://competitive-coding-api.herokuapp.com/api/interviewbit/';
     url = url.concat(handle);
     let obj = null;
     
@@ -17,4 +17,5 @@ async function codeforces(handle) {
     return obj;
   }
  
-export default codeforces;
+export default interviewbit;
+

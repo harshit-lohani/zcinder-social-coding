@@ -1,10 +1,11 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-async function codeforces(handle) {
+async function github(handle) {
 
 
-    let url = 'https://competitive-coding-api.herokuapp.com/api/codeforces/';
+    let url = 'https://api.github.com/users/';
     url = url.concat(handle);
+    url = url.concat('/repos')
     let obj = null;
     
     
@@ -17,4 +18,4 @@ async function codeforces(handle) {
     return obj;
   }
  
-export default codeforces;
+export default github;
