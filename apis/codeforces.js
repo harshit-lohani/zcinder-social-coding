@@ -4,11 +4,11 @@ var Codeforces = require('codeforces-api');
 Codeforces.setApis('c355b982df9c86902c506e41e7a5ffa7cd432792', '4af7cda608b19e67c230f59c8be0f6a5df6138db');
 
 var parameters = {
-    handle: 'ishangarg09',
+    handles: 'ishangarg09',
     // onlyOnline: false
 };
 
-export function codeforces_data () {Codeforces.user.status(parameters, function (err,data) {
+function codeforces_data () {Codeforces.user.info(parameters, function (err,data) {
     if(err){
         return console.log(err);
     }
@@ -20,3 +20,4 @@ export function codeforces_data () {Codeforces.user.status(parameters, function 
 
 //user.status to return all the submissions of user
 //user.rating will return user rating + the details of contest he has participated in
+codeforces_data();
