@@ -1,11 +1,17 @@
 import React from 'react'
-import {Link} from "react-router-dom"
-
+import {useLocation} from 'react-router-dom'
+import InputForm from './components/InputForm/InputForm';
 
 function Dashboard() {
-       
+  const location = useLocation(); 
+  const {emailID,isNew} = location.state  
     return (
-    <div>Dashboard</div>
+    <React.Fragment>
+      <div>Navbar</div>
+      <img src="" className='profile-photo'/>Photo goes here
+      <div>Email : {emailID}</div>
+      {isNew?<InputForm />:null}
+    </React.Fragment>
   )
 }
 

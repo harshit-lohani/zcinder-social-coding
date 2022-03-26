@@ -5,6 +5,7 @@ import Dashboard from './Dashboard';
 import Friends from './components/Friends/Friends';
 
 function App() {
+
   return (
     <div className="App">
     <Routes>
