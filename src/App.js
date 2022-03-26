@@ -4,6 +4,7 @@ import Login from './Login';
 import Dashboard from './Dashboard';
 import Friends from './components/Friends/Friends';
 import TotalContri from './components/TotalContri';
+import Repositories from './components/Repositories';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <Route exact path='/' element={<Login/>}/>
       <Route path = '/dashboard' element={<Dashboard/>}/>
       <Route path = '/friends' element={<Friends/>} />
-      <Route path = '/test' element={<TotalContri/>} />
+      <Route path = '/test' element={<Repositories/>} />
    </Routes>
     </div>
   );
