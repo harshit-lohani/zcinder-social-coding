@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth,GoogleAuthProvider,signInWithPopup } from "firebase/auth" ;
 import {Link,useHistory,Route} from "react-router-dom"
-import Dashboard from "./Dashboard";
+import Dashboard from "./pages/Dashboard";
 import 'firebase/firestore'
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
