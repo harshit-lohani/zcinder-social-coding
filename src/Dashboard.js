@@ -4,8 +4,11 @@ import DashNav from './components/DashNav'
 import Sidebar from './components/NavSidebar'
 import './dashboard.css'
 import leetcode from './leetcode'
-// import output from './github'
+// import github from './github'
 import interviewbit from './interviewbit'
+import codeforces from './codeforces'
+// import codeforces_data from '../node_modules/codeforces-api';
+
 
 
 // var Codeforces = require('./node_modules/codeforces-api');
@@ -16,10 +19,15 @@ import interviewbit from './interviewbit'
 // }
 
 function Dashboard() {
-  let obj = leetcode('ishangarg');
+  let obj = codeforces('ishangarg');
 
   console.log(obj);
+  // codeforces_data();
   // leetcode('ishangarg');
+
+
+
+  // github('ishangarg'); //this will save the user info in user.json file
     return (
         <div>
             <div>Dashboard</div>

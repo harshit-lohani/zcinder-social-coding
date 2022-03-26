@@ -1,22 +1,20 @@
-var Codeforces = require('../node_modules/codeforces-api');
-// var env = require('env');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-Codeforces.setApis('c355b982df9c86902c506e41e7a5ffa7cd432792', '4af7cda608b19e67c230f59c8be0f6a5df6138db');
+async function codeforces(handle) {
 
-var parameters = {
-    handle: 'ishangarg09',
-    // onlyOnline: false
-};
 
-Codeforces.user.status(parameters, function (err,data) {
-    if(err){
-        return console.log(err);
+    let url = 'https://competitive-coding-api.herokuapp.com/api/codeforces/';
+    url = url.concat(handle);
+    let obj = null;
+    
+    
+    try {
+      obj = await (await fetch(url)).json();
+    } catch(e) {
+        console.log('error');
     }
-    console.log(data);
-    // const obj = JSON.parse(data);
-    // console.log(obj.id);
-});
-
-
-//user.status to return all the submissions of user
-//user.rating will return user rating + the details of contest he has participated in
+    
+    return obj;
+  }
+ 
+export default codeforces;
