@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import DashNav from './components/DashNav'
-import Sidebar from './components/NavSidebar'
+import Sidebar from './components/Sidebar/Sidebar'
 import './dashboard.css'
 import leetcode from './leetcode'
 // import output from './github'
@@ -28,7 +28,9 @@ function Dashboard() {
                     <DashNav/>
                  </div>
             </div>
-    
+            <div className="sidenav">
+              <Sidebar/>
+            </div>
         </div>
   )
 }
