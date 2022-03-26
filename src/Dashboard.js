@@ -1,8 +1,11 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import leetcode from './leetcode'
-// import output from './github'
+// import github from './github'
 import interviewbit from './interviewbit'
+import codeforces from './codeforces'
+// import codeforces_data from '../node_modules/codeforces-api';
+
 
 // var Codeforces = require('./node_modules/codeforces-api');
 // const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
@@ -14,10 +17,15 @@ import interviewbit from './interviewbit'
 
 
 function Dashboard() {
-  let obj = leetcode('ishangarg');
+  let obj = codeforces('ishangarg');
 
   console.log(obj);
+  // codeforces_data();
   // leetcode('ishangarg');
+
+
+
+  // github('ishangarg'); //this will save the user info in user.json file
     return (
     <div>Dashboard</div>
   )
