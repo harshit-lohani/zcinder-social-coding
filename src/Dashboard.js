@@ -12,6 +12,7 @@ function Dashboard() {
   const {emailID,isNew} = location.state  
 
     return (
+
     <React.Fragment>
       <div>Navbar</div>
       <img src="" className='profile-photo'/>Photo goes here
