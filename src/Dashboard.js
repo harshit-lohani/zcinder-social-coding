@@ -17,7 +17,6 @@ function Dashboard() {
 
   console.log(obj);
   // leetcode('ishangarg');
-
     return (
     <div>Dashboard</div>
   )
