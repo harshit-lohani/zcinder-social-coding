@@ -1,11 +1,10 @@
 import './App.css';
 import {Routes, Route} from 'react-router-dom'
 import Login from './Login';
-import Dashboard from './Dashboard';
+import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
-import NavBar from './components/DashNav'
-import TotalContri from './components/TotalContri';
-import Repositories from './components/Repositories/Repositories';
+import Repositories from './components/Repositories';
+
 
 
 function App() {
