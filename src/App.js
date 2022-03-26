@@ -4,15 +4,20 @@ import Login from './Login';
 import Dashboard from './Dashboard';
 import Profile from './pages/Profile';
 import NavBar from './components/DashNav'
+import TotalContri from './components/TotalContri';
+import Repositories from './components/Repositories';
+
 
 function App() {
+
   return (
     <div className="App">
     <Routes>
       <Route exact path='/' element={<Login/>}/>
       <Route path = '/dashboard' element={<Dashboard/>}/>
       <Route path = '/profile' element={<Profile/>} />
-    </Routes>
+      <Route path = '/test' element={<Repositories/>} />
+   </Routes>
     </div>
   );
 }

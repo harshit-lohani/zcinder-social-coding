@@ -1,37 +1,24 @@
 import React from 'react'
-import {Link} from "react-router-dom"
-import DashNav from './components/DashNav'
-import Sidebar from './components/Sidebar/Sidebar'
-import './dashboard.css'
+
+import {useLocation} from 'react-router-dom'
+import InputForm from './components/InputForm/InputForm';
 import leetcode from './leetcode'
-// import output from './github'
 import interviewbit from './interviewbit'
-
-// var Codeforces = require('./node_modules/codeforces-api');
-// const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-
-// async function load() {
-  
-// }
+import codeforces from './codeforces'
+import github from './github'
 
 function Dashboard() {
-  let obj = leetcode('ishangarg');
+  const location = useLocation(); 
+  const {emailID,isNew} = location.state  
 
-  console.log(obj);
-  // leetcode('ishangarg');
     return (
-        <div>
-            <div>Dashboard</div>
-            <div className='main'>
-                
-                <div className='dashnav'>
-                    <DashNav/>
-                 </div>
-            </div>
-            <div className="sidenav">
-              <Sidebar/>
-            </div>
-        </div>
+
+    <React.Fragment>
+      <div>Navbar</div>
+      <img src="" className='profile-photo'/>Photo goes here
+      <div>Email : {emailID}</div>
+      {isNew?<InputForm />:null}
+    </React.Fragment>
   )
 }
 
