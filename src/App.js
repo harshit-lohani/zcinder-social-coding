@@ -4,7 +4,7 @@ import Login from './Login';
 import Dashboard from './Dashboard';
 import Friends from './components/Friends/Friends';
 import TotalContri from './components/TotalContri';
-import Repositories from './components/Repositories/Repositories';
+import Repositories from './components/Repositories';
 
 
 function App() {
