@@ -5,7 +5,7 @@ import Dashboard from './Dashboard';
 import Profile from './pages/Profile';
 import NavBar from './components/DashNav'
 import TotalContri from './components/TotalContri';
-import Repositories from './components/Repositories';
+import Repositories from './components/Repositories/Repositories';
 
 
 function App() {
