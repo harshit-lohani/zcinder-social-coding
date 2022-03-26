@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link,useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {auth,provider} from "./Firebase"
-import { signInWithPopup } from "firebase/auth" ;
+import { signInWithPopup,getAdditionalUserInfo } from "firebase/auth" ;
 import './login.css'
 
 function Login() {
-    const navigate = useNavigate() ; 
+    const navigate = useNavigate();
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider).then((result) => {
-            console.log(result) ;
-            navigate('/dashboard')
+            const details = getAdditionalUserInfo(result)
+            navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
         }).catch((error)=>{
             console.log(error)
         })
