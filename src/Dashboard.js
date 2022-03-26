@@ -1,23 +1,15 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import leetcode from './leetcode'
-// import github from './github'
 import interviewbit from './interviewbit'
 import codeforces from './codeforces'
-// import codeforces_data from '../node_modules/codeforces-api';
+import github from './github'
 
-
-// var Codeforces = require('./node_modules/codeforces-api');
-// const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-
-// async function load() {
-  
-// }
 
 
 
 function Dashboard() {
-  let obj = codeforces('ishangarg');
+  let obj = github('ishangarg9');
 
   console.log(obj);
   // codeforces_data();
