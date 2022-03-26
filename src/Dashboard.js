@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import leetcode from './leetcode'
+// import output from './github'
 import interviewbit from './interviewbit'
 
 // var Codeforces = require('./node_modules/codeforces-api');
@@ -13,7 +14,7 @@ import interviewbit from './interviewbit'
 
 
 function Dashboard() {
-  let obj = interviewbit('ishangarg');
+  let obj = leetcode('ishangarg');
 
   console.log(obj);
   // leetcode('ishangarg');
