@@ -5,10 +5,13 @@ import { signInWithPopup,getAdditionalUserInfo } from "firebase/auth" ;
 import './login.css'
 
 function Login() {
+
     const navigate = useNavigate();
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider).then((result) => {
             const details = getAdditionalUserInfo(result)
+            localStorage.setItem('userInfo', JSON.stringify(result));
+            localStorage.setItem('userDetails', JSON.stringify(details));
             navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
         }).catch((error)=>{
             console.log(error)

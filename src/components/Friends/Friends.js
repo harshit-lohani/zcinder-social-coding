@@ -4,7 +4,7 @@ import "./Friends.css"
 
 function Friends() {
   return (
-    <div className='friend_container'>
+    <div className='friend-container'>
         <div className='friend-header'>
           Friends (415)
         </div>
