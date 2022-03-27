@@ -5,7 +5,8 @@ import {doc,getDoc,setDoc} from "firebase/firestore"
 import { signInWithPopup,getAdditionalUserInfo } from "firebase/auth" ;
 import './login.css'
 
-function Login() {
+function Login({authorised}) {
+
     const navigate = useNavigate();
 
     const addUserProfile= async (data)=>{
@@ -48,11 +49,18 @@ function Login() {
 
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider).then((result) => {
+<<<<<<< HEAD
             const details = getAdditionalUserInfo(result);
             console.log(details);
             if(details.isNewUser==true){
                 addUserProfile(details);
             }
+=======
+            const details = getAdditionalUserInfo(result)
+            localStorage.setItem('userInfo', JSON.stringify(result));
+            localStorage.setItem('userDetails', JSON.stringify(details));
+            authorised = true ; 
+>>>>>>> 0a5f468f077aae24074b35b83c360e22166ffbb7
             navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
         }).catch((error)=>{
             console.log(error)
