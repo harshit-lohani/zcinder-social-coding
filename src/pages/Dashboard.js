@@ -8,7 +8,7 @@ import github from '../github'
 import DashNav from '../components/DashNav';
 import NavBar from '../components/NavBar';
 import GitPage from './GitPage';
-import IBPage from './IBPage';
+import CFPage from './CFPage';
 import LeetPage from './LeetPage';
 import OverViewPage from './OverViewPage';
 function Dashboard({authorised}) {
@@ -25,7 +25,7 @@ function Dashboard({authorised}) {
       {index==1?<GitPage />:null}
       {index==2?<LeetPage />:null}
       {index==0?<OverViewPage />:null}
-      {index==3?<IBPage />:null}
+      {index==3?<CFPage />:null}
 
       <img src="" className='profile-photo'/>Photo goes here
       <div>Email : {user.user.email}</div>
