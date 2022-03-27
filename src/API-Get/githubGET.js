@@ -59,7 +59,7 @@ function githubREPO(gh_handle, repo_no){
       var id2 = 'repo-' + repo_no + '-lang';
       var id3 = 'repo-' + repo_no + '-desc';
 
-      document.getElementById('git-repo-number').textContent = repos ;
+      document.getElementById('git-repo-number').textContent = repos + " Repositories" ;
       console.log(repos);
   
       if(repo_no < repos){

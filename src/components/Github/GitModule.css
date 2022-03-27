@@ -1,0 +1,12 @@
+.gitmodule-wrapper{
+    height: 80vh;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}

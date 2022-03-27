@@ -1,6 +1,6 @@
 .gitstat-wrapper{
     width: 25%;
-    margin: 10px;
+    margin: 5px 10px;
 }
 
 .gitstat-container{
@@ -8,7 +8,7 @@
     flex-direction: row;
     background: gray;
     margin: 10px 0;
-    padding: 10px 10px;
+    padding: 10px 20px;
     /* justify-content: space-between; */
 }
 
