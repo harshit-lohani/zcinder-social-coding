@@ -5,6 +5,7 @@ import DashNav from '../components/DashNav'
 import Friends from '../components/Friends/Friends'
 import Sidebar from '../components/Sidebar/Sidebar'
 import NavBar from '../components/NavBar'
+import UserInfo from '../components/UserInfo/UserInfo'
 import './Profile.css'
 
 function Profile({authorised}) {
@@ -18,7 +19,9 @@ function Profile({authorised}) {
       </nav>
       <div class="profile-flex-container">
         <Sidebar />
-        <Friends />
+        {/* <Friends /> */}
+        <UserInfo/>
+
       </div>
     </React.Fragment>
   )
