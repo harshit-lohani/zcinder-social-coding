@@ -13,7 +13,7 @@ async function codeforces(handle) {
       }
     
     // console.log(obj);
-    return Promise.all(obj);
+    return obj;
   }
 
 
