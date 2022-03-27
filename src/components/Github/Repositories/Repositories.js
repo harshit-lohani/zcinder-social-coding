@@ -5,7 +5,7 @@ import "./Repositories.css"
 
 
 function Repositories() {
-    const [totalrepo,setTotalrepo]=useState(0);
+    const [totalrepo,setTotalrepo]=useState(1);
     const [repos,setRepos]=useState([{name:"testname",dectription:"testdescription",stack1:"Java",stack2:"Javascript",stack3:"Python"}]);
 
     const displayRepos=repos.map((Repo) => {

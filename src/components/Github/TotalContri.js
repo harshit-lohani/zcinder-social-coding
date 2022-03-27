@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { Navbar } from 'react-bootstrap';
 import {Link} from "react-router-dom"
 import { ToggleSlider }  from "react-toggle-slider";
+
 
 
 
@@ -10,8 +12,9 @@ function TotalContri() {
     
   return (
     <div>
-        <div>Total Contribution</div>
-        <div>some number here</div>
+        <div className='total-contri-text'>Total Contribution</div>
+        <div className='total-contri-number'>some number here</div>
+        <div className='divider'/>
         <ToggleSlider onToggle={state => setActive(state)}/>
             Slider is {active ? "active" : "inactive"}
     </div>
