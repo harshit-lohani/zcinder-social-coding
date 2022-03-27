@@ -4,7 +4,7 @@ import SidebarTab from './SidebarTab'
 
 function Sidebar() {
   return (
-    <React.Fragment>
+    <React.Fragment className='sidebar-main-fragment'>
       <div className='sidebar-main'>
         <div className='sidebar-main-section'>
           <SidebarTab name='Information'/>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {useLocation} from 'react-router-dom'
+import {useLocation, useResolvedPath} from 'react-router-dom'
 import InputForm from '../components/InputForm/InputForm';
 import leetcode from '../leetcode'
 import interviewbit from '../interviewbit'
@@ -9,16 +9,18 @@ import github from '../github'
 import DashNav from '../components/DashNav';
 
 function Dashboard() {
-  const location = useLocation(); 
-  const {emailID,isNew} = location.state  
+  var user = JSON.parse(localStorage.getItem('userInfo'));
+  var details = JSON.parse(localStorage.getItem('userDetails'));
 
+  console.log(user);
+  console.log(details);
     return (
 
     <React.Fragment>
       <DashNav/>
       <img src="" className='profile-photo'/>Photo goes here
-      <div>Email : {emailID}</div>
-      {isNew?<InputForm />:null}
+      <div>Email : {user.user.email}</div>
+      {/* {isAuthenticated?<InputForm />:null} */}
     </React.Fragment>
   )
 }
