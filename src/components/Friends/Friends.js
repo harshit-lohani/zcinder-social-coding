@@ -21,8 +21,8 @@ function Friends() {
       console.log(friend.stringValue);
       const friendRef = doc(db, "users", `${friend.stringValue}`);
      getDoc(friendRef)
-      .then(response =>{setFriendsData([...friendsData,response._document.data.value.mapValue.fields]);
-     console.log(response)});
+      .then(response1 =>{setFriendsData([...friendsData,response1._document.data.value.mapValue.fields]);
+     console.log(response1)});
       
     });
   });

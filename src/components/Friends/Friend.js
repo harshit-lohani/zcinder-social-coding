@@ -12,8 +12,8 @@ function Friend(props) {
         <div className='flex-space-between'>
           <div className="basic-info">
             <p className ="friend_name_holder">
-              <span className='friend_name'>{props.name.stringValue}</span>
-              <span className='friend_tag'>@{props.github.stringValue}</span>
+              <span className='friend_name'>{props.props.name.stringValue}</span>
+              <span className='friend_tag'>@{props.props.github.stringValue}</span>
             </p>
             <p className='friend_title'>Headmaster at Hogwarts</p>
           </div>
