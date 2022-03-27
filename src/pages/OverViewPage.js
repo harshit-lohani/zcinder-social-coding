@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import GitModule from '../components/Github/GitModule'
 
 function OverViewPage() {
   return (
-    <div>OverViewPage</div>
+    <React.Fragment>
+      <div>OverViewPage</div>
+      <GitModule />
+    </React.Fragment>
   )
 }
 
