@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {auth,provider, db} from "../../Firebase"
+import {doc,getDoc,updateDoc} from "firebase/firestore"
 import './InputForm.css'
 
 function InputForm() {
@@ -24,8 +26,17 @@ function InputForm() {
     setGitHandle(event.target.value)
   }
 
-  const submitHandler = (event) => {
+  const submitHandler = async event => {
       event.preventDefault() ;
+      var details = JSON.parse(localStorage.getItem('userDetails'));
+      const DocRef = doc(db, "users", `${details.profile.id}`);
+      await updateDoc(DocRef, {
+        "username": username,
+        "github": git_handle,
+        "leetcode": leet_handle,
+        "interview": ib_handle
+    });
+    console.log("Updated profile")
   }
 
   return (
