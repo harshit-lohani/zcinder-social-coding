@@ -4,7 +4,7 @@ import {auth,provider} from "./Firebase"
 import { signInWithPopup,getAdditionalUserInfo } from "firebase/auth" ;
 import './login.css'
 
-function Login() {
+function Login({authorised}) {
 
     const navigate = useNavigate();
     const signInWithGoogle = () => {
@@ -12,6 +12,7 @@ function Login() {
             const details = getAdditionalUserInfo(result)
             localStorage.setItem('userInfo', JSON.stringify(result));
             localStorage.setItem('userDetails', JSON.stringify(details));
+            authorised = true ; 
             navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
         }).catch((error)=>{
             console.log(error)

@@ -1,26 +1,27 @@
 import React from 'react'
 
-import {useLocation, useResolvedPath} from 'react-router-dom'
+import {Navigate, useLocation, useNavigate, useResolvedPath} from 'react-router-dom'
 import InputForm from '../components/InputForm/InputForm';
 import leetcode from '../leetcode'
 import interviewbit from '../interviewbit'
 import codeforces from '../codeforces'
 import github from '../github'
 import DashNav from '../components/DashNav';
+import NavBar from '../components/NavBar';
+import { Redirect } from 'react-router-dom';
 
-function Dashboard() {
+function Dashboard({authorised}) {
   var user = JSON.parse(localStorage.getItem('userInfo'));
   var details = JSON.parse(localStorage.getItem('userDetails'));
-
-  console.log(user);
-  console.log(details);
-    return (
-
+  if(!authorised){
+    return <Navigate to='/'/>
+  }
+  return (
     <React.Fragment>
-      <DashNav/>
+      <NavBar/>
       <img src="" className='profile-photo'/>Photo goes here
       <div>Email : {user.user.email}</div>
-      {/* {isAuthenticated?<InputForm />:null} */}
+      {details.isNewUser?<InputForm />:null}
     </React.Fragment>
   )
 }

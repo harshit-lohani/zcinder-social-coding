@@ -8,12 +8,14 @@ import Repositories from './components/Repositories/Repositories';
 
 
 function App() {
+  var user = JSON.parse(localStorage.getItem('userInfo')); 
+  var isAuthenticated = user==null?false:true 
   return (
     <div className="App">
       <Routes>
-        <Route exact path='/' element={<Login/>}/>
-        <Route path = '/dashboard' element={<Dashboard/>}/>
-        <Route path = '/profile' element={<Profile/>} />
+        <Route exact path='/' element={<Login authorised={isAuthenticated}/>}/>
+        <Route path = '/dashboard' element={<Dashboard authorised={isAuthenticated}/>}/>
+        <Route path = '/profile' element={<Profile authorised={isAuthenticated} />}/>
         <Route path = '/test' element={<Repositories/>} />
       </Routes>
     </div>
