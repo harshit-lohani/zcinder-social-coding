@@ -1,7 +1,8 @@
 import React from 'react'
 import  "./Friend.css"
 
-function Friend() {
+function Friend(props) {
+  console.log(props);
   return (
     <React.Fragment>
       <div className="friend_card">
@@ -11,8 +12,8 @@ function Friend() {
         <div className='flex-space-between'>
           <div className="basic-info">
             <p className ="friend_name_holder">
-              <span className='friend_name'>Anuj Gore</span>
-              <span className='friend_tag'>@Anuj7152</span>
+              <span className='friend_name'>{props.name.stringValue}</span>
+              <span className='friend_tag'>@{props.github.stringValue}</span>
             </p>
             <p className='friend_title'>Headmaster at Hogwarts</p>
           </div>
