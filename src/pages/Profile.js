@@ -5,6 +5,7 @@ import DashNav from '../components/DashNav'
 import Friends from '../components/Friends/Friends'
 import Sidebar from '../components/Sidebar/Sidebar'
 import NavBar from '../components/NavBar'
+import './Profile.css'
 
 function Profile({authorised}) {
   if(!authorised){
@@ -12,9 +13,13 @@ function Profile({authorised}) {
   }
   return (
     <React.Fragment>
+      <nav>
         <NavBar />
+      </nav>
+      <div class="profile-flex-container">
         <Sidebar />
         <Friends />
+      </div>
     </React.Fragment>
   )
 }
