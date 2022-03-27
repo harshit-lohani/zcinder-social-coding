@@ -1,0 +1,32 @@
+.total-contri-wrapper {
+    background: gray;
+    width: 25%;
+    margin: 10px;
+    padding: 40px 20px;
+}
+
+.total-contri-text {
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.total-contri-number {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.divider {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.slider-flex-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
