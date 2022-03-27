@@ -1,6 +1,8 @@
 import React from 'react'
+import {githubGET,githubREPO} from '../../API-Get/githubGET'
 
 function GitStats() {
+  githubGET() ;
   return (
     <React.Fragment>
       <img className='gitstat-logo'/>

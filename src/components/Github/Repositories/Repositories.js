@@ -1,34 +1,36 @@
 import React, { useState } from 'react'
 import {Link} from "react-router-dom"
+import { githubGET,githubREPO } from '../../../API-Get/githubGET';
 import "./Repositories.css"
 
 
 
 function Repositories() {
-    const [totalrepo,setTotalrepo]=useState(1);
-    const [repos,setRepos]=useState([{name:"testname",dectription:"testdescription",stack1:"Java",stack2:"Javascript",stack3:"Python"}]);
-
-    const displayRepos=repos.map((Repo) => {
-     
-     return (
-         <>
-       <div>{Repo.name}</div>
-       <div>{Repo.description}</div>
-       <div>Stacks
-       <div>{Repo.stack1}</div>
-       <div>{Repo.stack2}</div>
-       <div>{Repo.stack3}</div>
-       </div>
-       </>
-
-       );});
-    
+  const repos = githubREPO('ishangarg9',0) 
+  githubREPO('ishangarg9',0) 
+  githubREPO('ishangarg9',1) 
+  githubREPO('ishangarg9',2) 
   return (
-    <div>
-        <div>{totalrepo} Repositories</div>
-        <div>{displayRepos}</div>
-        
+    <React.Fragment>
+    <div className='repo-wrapper'>
+        <div id='git-repo-number'>Repositories</div>
+        <div className='repo'>
+          <div className='repo-name' id='repo-0-name'></div>
+          <div className='repo-lang' id='repo-0-lang'></div>
+          <div className='repo-desc' id='repo-0-desc'></div>
+        </div>
+        <div className='repo'>
+          <div className='repo-name' id='repo-1-name'></div>
+          <div className='repo-lang' id='repo-1-lang'></div>
+          <div className='repo-desc' id='repo-1-desc'></div>
+        </div>
+        <div className='repo'>
+          <div className='repo-name' id='repo-2-name'></div>
+          <div className='repo-lang' id='repo-2-lang'></div>
+          <div className='repo-desc' id='repo-2-desc'></div>
+        </div>
     </div>
+    </React.Fragment>
   )
 }
 

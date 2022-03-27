@@ -32,8 +32,6 @@ function githubGET(){
       console.log(val1);
         document.getElementById('git-followers').textContent = val1.followers;
         document.getElementById('git-following').textContent = val1.following;
-        document.getElementById('git-repos').textContent = val1.public_repos;
-        
   
       });
 
@@ -46,19 +44,22 @@ function githubGET(){
 function githubREPO(gh_handle, repo_no){
   let obj2 = github(gh_handle, '/repos');
   var promise2 = Promise.resolve(obj2);
-
   
 
     promise2.then(function(val2) {
 
+      var repos = 0 ;
       console.log(val2);
-
-      var repos = 0;
 
       for(var r of val2){
         repos++;
       }
       
+      var id1 = 'repo-' + repo_no + '-name';
+      var id2 = 'repo-' + repo_no + '-lang';
+      var id3 = 'repo-' + repo_no + '-desc';
+
+      document.getElementById('git-repo-number').textContent = repos ;
       console.log(repos);
   
       if(repo_no < repos){
@@ -81,11 +82,16 @@ function githubREPO(gh_handle, repo_no){
 
           console.log(val3.language);
 
-          document.getElementById('repo-lang').textContent = val3.language;
+          if(val3.description!=null)
+          document.getElementById(id3).textContent = val3.description;
+          else 
+          document.getElementById(id3).textContent = "No Description Available";
+
+          document.getElementById(id2).textContent = val3.language;
       
           });
-
-          document.getElementById('git-repo-name').textContent = val2[vv]['name'];
+         
+          document.getElementById(id1).textContent = val2[vv]['name'];
 
 
       }
@@ -94,7 +100,7 @@ function githubREPO(gh_handle, repo_no){
       }
   
       });
-
+      return repos ;
 }
 
-export {githubGET, githubREPO};
+export {githubGET,githubREPO}
