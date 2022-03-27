@@ -1,14 +1,58 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import {auth,provider} from "./Firebase"
+import {auth,provider, db} from "./Firebase"
+import {doc,getDoc,setDoc} from "firebase/firestore"
 import { signInWithPopup,getAdditionalUserInfo } from "firebase/auth" ;
 import './login.css'
 
 function Login() {
     const navigate = useNavigate();
+
+    const addUserProfile= async (data)=>{
+        
+
+        const {id,picture,name , email} = data.profile;
+        const userRef = doc(db,`users/${id}`);
+        console.log('reffound')
+        
+            
+            const timestamp = new Date();
+    
+            try{
+                await setDoc(userRef,{
+                    id,
+                    picture,
+                    name,
+                    email,
+                    createdDate:timestamp,
+                    friends:[],
+                    address:"",
+                    Phno:'',
+                    Tsize:'',
+                    github:"",
+                    leetcode:"",
+                    interview:"",
+                    rating:'',
+                    upvote:0
+
+
+                });
+            }catch(err){
+                console.log(err);
+            }
+        
+        
+        return true;
+    };
+
+
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider).then((result) => {
-            const details = getAdditionalUserInfo(result)
+            const details = getAdditionalUserInfo(result);
+            console.log(details);
+            if(details.isNewUser==true){
+                addUserProfile(details);
+            }
             navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
         }).catch((error)=>{
             console.log(error)

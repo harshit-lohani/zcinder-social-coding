@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import firebase from 'firebase/compat/app';
 import { getAuth,GoogleAuthProvider,signInWithPopup } from "firebase/auth" ;
 import {Link,useHistory,Route} from "react-router-dom"
 import Dashboard from "./pages/Dashboard";
@@ -20,6 +21,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+
 
 export const db = getFirestore() ;
 
