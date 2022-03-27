@@ -1,35 +1,45 @@
 import codeforces from "../codeforces";
 
-var cf_handle = 'tourist';
+// var cf_handle = 'tourist';
 
-function codeforcesGET() {
+function codeforcesGET(cf_handle, contest_no) {
 
     let obj = codeforces(cf_handle);
     var promise = Promise.resolve(obj);
 
-  promise.then(function(val) {
-    // contestName.push(val.contests['1']['Contest']);
-    // console.log(val);
-    // console.log(val.contests['1']['Contest']);
-    document.getElementById('cf_rating').textContent = val.rating;
-    document.getElementById('cf_rank').textContent = val.rank;
-    document.getElementById('cf_conre').textContent = val.contests['0']['Contest'];
-    document.getElementById('platform').textContent = val.platform;
+    promise.then(function(val) {
+
+        var no = 0;
+
+        for(var c of val.contests){
+          no++;
+        }
+
+        
+        document.getElementById('cf-rating').textContent = val.rating;
+        document.getElementById('cf-rank').textContent = val.rank;
+        document.getElementById('cf-max-rank').textContent = val['max rank'];
+        document.getElementById('cf-max-rating').textContent = val['max rating'];
+        document.getElementById('cf-no-of-contests').textContent = no;
+
+        if(contest_no < no){
+          
+          var id1 = '' + contest_no;
+          var id2 = 'contest-' + contest_no; 
+          
+          document.getElementById(id2 + '-name').textContent = val.contests[id1]['Contest'];
+          document.getElementById(id2 + '-rating-change').textContent = val.contests[id1]['Rating Change'];
+          document.getElementById(id2 + '-new-rating').textContent = val.contests[id1]['New Rating'];
+          document.getElementById(id2 + '-rank').textContent = val.contests[id1]['Rank'];
+        }
+        else{
+          console.log("Contest Not Given")
+        }
+        
 
 
-    //printing last 5 contests
 
-    // document.getElementById('cf_contest_0').textContent = val.contests['0']['Contest'];
-    // document.getElementById('cf_contest_1').textContent = val.contests['1']['Contest'];
-    // document.getElementById('cf_contest_0').textContent = val.contests['2']['Contest'];
-    // document.getElementById('cf_contest_0').textContent = val.contests['3']['Contest'];
-    // document.getElementById('cf_contest_0').textContent = val.contests['4']['Contest'];
-  
-
-    val.forEach(function(dd) { console.log(dd.contests); });
-
-
-});
+    });
 
 }
 
