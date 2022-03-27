@@ -5,6 +5,24 @@ var gh_handle = 'ishangarg9';
 
 var repos;
 
+async function github_contributions(gh_handle){
+  var url = 'https://json-contributions.vercel.app/api/user?username=';
+  url += gh_handle;
+
+  let con = null;
+    
+    console.log(url);
+    
+    try {
+      con = await (await fetch(url)).json();
+    } catch(e) {
+        console.log('error');
+    }
+
+  return con;
+
+}
+
 async function repo_lang(url){
   let obj = null;
     
@@ -17,6 +35,22 @@ async function repo_lang(url){
     }
     
   return obj;
+}
+
+
+function gitCONTRI(gh_handle){
+
+  let obj = github_contributions(gh_handle);
+  let promise1 = Promise.resolve(obj);
+
+  promise1.then(function(val1) {
+
+    document.getElementById('git-contri').textContent = val1.max;
+
+    });
+
+  
+  
 }
 
 function githubGET(){
@@ -103,4 +137,4 @@ function githubREPO(gh_handle, repo_no){
       return repos ;
 }
 
-export {githubGET,githubREPO}
+export {githubGET,githubREPO, gitCONTRI}
