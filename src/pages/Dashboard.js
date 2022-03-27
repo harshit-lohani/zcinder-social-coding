@@ -23,7 +23,7 @@ function Dashboard({authorised}) {
       <NavBar/>
       <DashNav setIndex={setIndex} />
       {index==1?<GitPage />:null}
-      {index==1?<LeetPage />:null}
+      {index==2?<LeetPage />:null}
       {index==0?<OverViewPage />:null}
       {index==3?<IBPage />:null}
 

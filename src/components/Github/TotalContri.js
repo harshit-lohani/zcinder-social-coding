@@ -11,13 +11,15 @@ function TotalContri() {
 
     
   return (
-    <div>
+    <React.Fragment>
+    <div className='total-contri-wrapper'>
         <div className='total-contri-text'>Total Contribution</div>
         <div className='total-contri-number'>some number here</div>
         <div className='divider'/>
         <ToggleSlider onToggle={state => setActive(state)}/>
             Slider is {active ? "active" : "inactive"}
     </div>
+    </React.Fragment>
   )
 }
 

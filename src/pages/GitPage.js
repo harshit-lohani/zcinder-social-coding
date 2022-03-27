@@ -4,7 +4,7 @@ import GitModule from '../components/Github/GitModule'
 function GitPages() {
   return (
     <React.Fragment>
-        <GitModule/ >
+        <GitModule />
     </React.Fragment>  
   )
 }
