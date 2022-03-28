@@ -15,7 +15,7 @@ function Friends() {
     const DocRef = doc(db, "users", `${details.profile.id}`);
     var document=await getDoc(DocRef);
       console.log(document._document.data.value.mapValue.fields.friends.arrayValue.values);
-     await setFriendList(document._document.data.value.mapValue.fields.friends.arrayValue.values);
+      setFriendList(document._document.data.value.mapValue.fields.friends.arrayValue.values);
       console.log(friendList);
     
     friendList.map((friend, i) =>{

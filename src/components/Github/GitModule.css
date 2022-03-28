@@ -1,6 +1,6 @@
 .gitmodule-wrapper{
     height: 80vh;
-    padding: 50px 0px;
+    padding: 20px 0 50px 0px;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -9,4 +9,5 @@
     align-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+    /* background:  */
 }
