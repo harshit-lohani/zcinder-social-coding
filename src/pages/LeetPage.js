@@ -1,8 +1,11 @@
 import React from 'react'
+import LCstats from '../components/leetcode/LCstats'
 
 function LeetPages() {
   return (
-    <div>LeetPages</div>
+    <React.Fragment>
+      <LCstats />
+    </React.Fragment>
   )
 }
 
