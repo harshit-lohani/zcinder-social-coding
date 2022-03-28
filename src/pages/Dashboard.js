@@ -16,14 +16,15 @@ import Layout from './Layout'
 function Dashboard({authorised}) {
   var user = JSON.parse(localStorage.getItem('userInfo'));
   var details = JSON.parse(localStorage.getItem('userDetails'));
+  console.log(details)
   const [index,setIndex] = useState(0);
-  
+  const [formSubmitted,setFormSubmitted] = useState(!details.isNewUser)
   if(!authorised){
     return <Navigate to='/'/>
   }
-  if(details.isNewUser){
+  if(!formSubmitted){
     return (
-      <InputForm/>
+      <InputForm setFormSubmitted={setFormSubmitted}/>
     )
   }
   return (
