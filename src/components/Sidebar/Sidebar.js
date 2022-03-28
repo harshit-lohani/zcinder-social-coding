@@ -13,10 +13,9 @@ function Sidebar({setPage}) {
           <SidebarTab onClick={()=>setPage(2)} name='Connected Apps'/>
           <SidebarTab onClick={()=>setPage(3)} name='Goodies'/>
         </div>
-        <hr/> 
-        <div className='sidebar-settings-section'>
-          <SidebarTab name='SignOut'/>
-        </div>
+        <hr className='sidebar-divider'/>
+        <hr className='sidebar-divider'/>
+        <hr className='sidebar-divider'/>
       </div>
     </React.Fragment>
   )
