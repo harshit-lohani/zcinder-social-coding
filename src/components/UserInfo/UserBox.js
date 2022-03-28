@@ -2,19 +2,22 @@ import React from 'react'
 import "./UserBox.css"
 
 function UserBox() {
+
+    var details = JSON.parse(localStorage.getItem('userDetails'));
+    console.log(details);
   return (
     <div className='userbox-main'>
         <div className='userbox-flex-container'>
             <div className='userbox-img-holder'>
-                <img src=""></img>
+                <img src={details.profile.picture}></img>
             </div>
             <div className='info-holder'>
                 <div className='username-holder'>
                     <div className='username'>
-                        Username
+                        {details.profile.name}
                     </div>
                     <div className='usertag'>
-                        @UserTag
+                        {details.profile.email}
                     </div>
                 </div>
                 <div className='score-holder'>

@@ -9,7 +9,7 @@ const DashNav=({setIndex})=>{
       <React.Fragment> 
         <div className="dashnav-wrapper">
           <Container expand='sm'>
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="light" variant="light">
               <Container className="justify-content-center">
                 <Nav className="justify-content-center" >
                   <Col><Nav.Link onClick={()=>setIndex(0)}>Overview</Nav.Link></Col>

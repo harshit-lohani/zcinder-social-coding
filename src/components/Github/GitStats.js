@@ -9,7 +9,7 @@ function GitStats() {
       <div className='gitstat-wrapper'>
         <div className='gitstat-container'>
           <div className='gitstat-img-container'>
-            <img src='#'/>
+          <img src="https://img.icons8.com/ios/50/4a90e2/user-male-circle.png"/>
           </div>
           <div className='gitstat-data-container'>
             <div id='git-followers' className='gitstat-data-value'></div>
@@ -18,7 +18,7 @@ function GitStats() {
         </div>
         <div className='gitstat-container'>
           <div className='gitstat-img-container'>
-            <img src='#'/>
+          <img src="https://img.icons8.com/ios/50/4a90e2/trust--v1.png"/>
           </div>
           <div className='gitstat-data-container'>
             <div id='git-following' className='gitstat-data-value'></div>
