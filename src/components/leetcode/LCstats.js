@@ -12,8 +12,8 @@ function LCstats(){
             <div>Medium Submitted: <span id='lc-medium'></span></div>
             <div>Hard Submitted: <span id='lc-hard'></span></div>
             <div>Easy Acceptance Rate: <span id='lc-easy-acc'></span></div>
-            <div>Medium Acceptance Rate: <span id='lc-Medium-acc'></span></div>
-            <div>Hard Acceptance Rate: <span id='lc-Hard-acc'></span></div>
+            <div>Medium Acceptance Rate: <span id='lc-medium-acc'></span></div>
+            <div>Hard Acceptance Rate: <span id='lc-hard-acc'></span></div>
 
         </React.Fragment>
 
