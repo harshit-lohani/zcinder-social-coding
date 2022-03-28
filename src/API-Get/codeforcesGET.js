@@ -1,6 +1,6 @@
 import codeforces from "../codeforces";
 
-var cf_handle = 'tourist';
+var cf_handle = 'amroth';
 
 function codeforcesRAT(cf_handle){
   let obj = codeforces(cf_handle);

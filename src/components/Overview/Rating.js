@@ -5,7 +5,7 @@ import leetcodeGET from '../../API-Get/leetcodeGET'
 import interviewbitGET from '../../API-Get/leetcodeGET'
 
 function Rating() {
-    codeforcesRAT('tourist');
+    codeforcesRAT('amroth');
     // leetcodeGET('ishangarg09');
   return (
     <div className='rating-wrapper'>

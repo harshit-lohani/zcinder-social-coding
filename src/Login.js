@@ -54,10 +54,10 @@ function Login({authorised}) {
             if(details.isNewUser==true){
                 addUserProfile(details);
             }
-            navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
             localStorage.setItem('userInfo', JSON.stringify(result));
             localStorage.setItem('userDetails', JSON.stringify(details));
             authorised = true ; 
+            navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
         }).catch((error)=>{
             console.log(error)
         })
@@ -67,7 +67,7 @@ function Login({authorised}) {
             <div className="main">
                 <div className="content">
                     <div className="logo">
-                        <img src="https://cdn-icons-png.flaticon.com/512/190/190942.png" alt="logo img"></img>
+                        <img src="" alt="logo img"></img>
                     </div>
                     <div className="header">
                         <p className="title">
@@ -94,4 +94,3 @@ function Login({authorised}) {
 }
 
 export default Login
-

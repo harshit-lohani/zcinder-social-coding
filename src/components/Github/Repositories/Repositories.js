@@ -6,10 +6,10 @@ import "./Repositories.css"
 
 
 function Repositories() {
-  const repos = githubREPO('ishangarg9',0) 
-  githubREPO('ishangarg9',0) 
-  githubREPO('ishangarg9',1) 
-  githubREPO('ishangarg9',2) 
+  const repos = githubREPO('harshit-lohani',0) 
+  githubREPO('harshit-lohani',0) 
+  githubREPO('harshit-lohani',1) 
+  githubREPO('harshit-lohani',2) 
   return (
     <React.Fragment>
     <div className='repo-wrapper'>

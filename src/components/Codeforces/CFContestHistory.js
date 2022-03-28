@@ -4,11 +4,11 @@ import './CFContestHistory.css'
 import './CFStats.css'
 
 function CFContestHistory() {
-    codeforcesGET("tourist",0)
-    codeforcesGET("tourist",1)
-    codeforcesGET("tourist",2)
-    codeforcesGET("tourist",3)
-    codeforcesGET("tourist",4)
+    codeforcesGET("amroth",0)
+    codeforcesGET("amroth",1)
+    codeforcesGET("amroth",2)
+    codeforcesGET("amroth",3)
+    codeforcesGET("amroth",4)
     return (
     <React.Fragment>
         <div className='cf-stats-wrapper'>

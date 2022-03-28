@@ -4,7 +4,7 @@ import './CFStats.css'
 //curr rating, max rating, rank, no. of contest, max rank, contest history
 // contest name, rating change, new rating, rank 
 function CFStats() {
-    codeforcesGET("tourist",0)
+    codeforcesGET("amroth",0)
   return (
     <React.Fragment>
         <div className="cf-stats-wrapper">
