@@ -1,7 +1,8 @@
 import github from "../github";
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-
-var gh_handle = 'ishangarg9';
+var details = JSON.parse(localStorage.getItem('userDetails'));
+console.log(details)
+var gh_handle = details.github;
 
 var repos;
 
