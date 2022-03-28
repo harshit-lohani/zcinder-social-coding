@@ -11,7 +11,7 @@ function Sidebar({setPage}) {
           <SidebarTab onClick={()=>setPage(0)} name='Information'/>
           <SidebarTab onClick={()=>setPage(1)} name='Friends'/>
           {/* <SidebarTab onClick={()=>setPage(2)} name='Connected Apps'/> */}
-          <SidebarTab onClick={()=>setPage(3)} name='Goodies'/>
+          <SidebarTab onClick={()=>setPage(2)} name='Goodies'/>
         </div>
         <hr className='sidebar-divider'/>
         <hr className='sidebar-divider'/>
