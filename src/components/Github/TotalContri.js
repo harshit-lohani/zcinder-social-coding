@@ -9,7 +9,7 @@ import { gitCONTRI } from '../../API-Get/githubGET';
 function TotalContri() {
   const [active, setActive] = useState(false);
 
-  gitCONTRI('ishangarg9');
+  gitCONTRI('harshit-lohani');
 
     
   return (

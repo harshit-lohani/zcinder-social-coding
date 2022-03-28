@@ -1,7 +1,6 @@
 import leetcode from "../leetcode";
 
-var details = JSON.parse(localStorage.getItem('userDetails'));
-var lc_handle = details.leetcode;
+// var lc_handle = 'ishangarg09';
 
 function leetcodeGET(lc_handle) {
 
