@@ -54,10 +54,10 @@ function Login({authorised}) {
             if(details.isNewUser==true){
                 addUserProfile(details);
             }
+            navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
             localStorage.setItem('userInfo', JSON.stringify(result));
             localStorage.setItem('userDetails', JSON.stringify(details));
             authorised = true ; 
-            navigate('/dashboard',{state : {emailID : result.user.email, isNew: details.isNewUser}})
         }).catch((error)=>{
             console.log(error)
         })

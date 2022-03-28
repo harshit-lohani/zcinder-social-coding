@@ -8,7 +8,7 @@ import NavBar from '../components/NavBar'
 import UserInfo from '../components/UserInfo/UserInfo'
 import './Profile.css'
 import ConnectedApps from '../components/ConnectedApps/ConnectedApps'
-import Goodies from '../components/ShipRocket/Goodies.js'
+import Goodies from '../components/shiprocket/goodies.js'
 
 function Profile({authorised}) {
 
