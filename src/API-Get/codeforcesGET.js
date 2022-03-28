@@ -38,7 +38,7 @@ function codeforcesGET(cf_handle, contest_no) {
           var id1 = '' + contest_no;
           var id2 = 'contest-' + contest_no; 
           
-          document.getElementById(id2 + '-name').textContent = val.contests[id1]['Contest']+" ";
+          document.getElementById(id2 + '-name').textContent = contest_no+1 + ". " + val.contests[id1]['Contest']+" ";
           document.getElementById(id2 + '-rating-change').textContent = val.contests[id1]['Rating Change'];
           document.getElementById(id2 + '-new-rating').textContent = val.contests[id1]['New Rating'];
           document.getElementById(id2 + '-rank').textContent = val.contests[id1]['Rank']+" ";

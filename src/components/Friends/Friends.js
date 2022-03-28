@@ -12,11 +12,12 @@ function Friends() {
 
   const getFriendsList=async event=>{
     var details = JSON.parse(localStorage.getItem('userDetails'));
+
     const DocRef = doc(db, "users", `${details.profile.id}`);
     var document=await getDoc(DocRef);
       console.log(document._document.data.value.mapValue.fields.friends.arrayValue.values);
      await setFriendList(document._document.data.value.mapValue.fields.friends.arrayValue.values);
-      console.log(friendList);
+      console.log("Done\n"+friendList);
     
     friendList.map((friend, i) =>{
       console.log(friend.stringValue);

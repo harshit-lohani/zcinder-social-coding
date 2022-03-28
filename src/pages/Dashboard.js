@@ -18,18 +18,19 @@ function Dashboard({authorised}) {
   if(!authorised){
     return <Navigate to='/'/>
   }
+  if(details.isNewUser){
+    return (
+      <InputForm/>
+    )
+  }
   return (
     <React.Fragment>
       <NavBar/>
       <DashNav setIndex={setIndex} />
-      {index==1?<GitPage />:null}
-      {index==2?<LeetPage />:null}
       {index==0?<OverViewPage />:null}
-      {index==3?<CFPage />:null}
-
-      <img src="" className='profile-photo'/>Photo goes here
-      <div>Email : {user.user.email}</div>
-      {details.isNewUser?<InputForm />:null}
+      {index==1?<GitPage />:null}
+      {index==2?<CFPage />:null}
+      {index==3?<LeetPage />:null}
     </React.Fragment>
   )
 }
