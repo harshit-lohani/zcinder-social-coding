@@ -13,7 +13,13 @@ function codeforcesRAT(cf_handle){
 
 }
 
+const data = [];
+
 function codeforcesGET(cf_handle, contest_no) {
+
+    
+
+
 
     let obj = codeforces(cf_handle);
     var promise = Promise.resolve(obj);
@@ -24,6 +30,7 @@ function codeforcesGET(cf_handle, contest_no) {
 
         for(var c of val.contests){
           no++;
+          data.push(c['New Rating']);
         }
 
         
@@ -50,7 +57,10 @@ function codeforcesGET(cf_handle, contest_no) {
 
 
 
+
     });
+
+    console.log(data[0]);
 
 }
 
