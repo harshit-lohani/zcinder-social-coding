@@ -2,20 +2,20 @@ import React from 'react'
 import  "./Sidebar.css"
 import SidebarTab from './SidebarTab'
 
-function Sidebar() {
+function Sidebar({setPage}) {
+
   return (
     <React.Fragment>
       <div className='sidebar-main'>
         <div className='sidebar-main-section'>
-          <SidebarTab name='Information'/>
-          <SidebarTab name='Friends'/>
-          <SidebarTab name='Information'/>
-          <SidebarTab name='Information'/>
+          <SidebarTab onClick={()=>setPage(0)} name='Information'/>
+          <SidebarTab onClick={()=>setPage(1)} name='Friends'/>
+          <SidebarTab onClick={()=>setPage(2)} name='Connected Apps'/>
+          <SidebarTab onClick={()=>setPage(3)} name='Goodies'/>
         </div>
-        <hr/> 
-        <div className='sidebar-settings-section'>
-          <SidebarTab name='SignOut'/>
-        </div>
+        <hr className='sidebar-divider'/>
+        <hr className='sidebar-divider'/>
+        <hr className='sidebar-divider'/>
       </div>
     </React.Fragment>
   )

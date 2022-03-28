@@ -10,6 +10,7 @@ const Friends=()=> {
   const [friendList,setFriendList] = useState([]) ; 
   
   
+
   useEffect(() => {
     const getFriendsList=async ()=>{
       var details = JSON.parse(localStorage.getItem('userDetails'));
@@ -37,6 +38,7 @@ const Friends=()=> {
     getFriendsList();
     
   },[]);
+
   
   
  
