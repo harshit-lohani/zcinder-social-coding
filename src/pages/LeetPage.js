@@ -4,7 +4,9 @@ import LCstats from '../components/leetcode/LCstats'
 function LeetPages() {
   return (
     <React.Fragment>
-      <LCstats />
+      <div className='display-flex-column'>
+        <LCstats />
+      </div>
     </React.Fragment>
   )
 }
