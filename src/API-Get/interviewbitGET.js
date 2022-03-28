@@ -9,18 +9,11 @@ function interviewbitGET(ib_handle){
 
   promise.then(function(val) {
     // contestName.push(val.contests['1']['Contest']);
-    console.log(val.rank);
     // console.log(val.contests['1']['Contest']);
 
     document.getElementById('ib-rank').textContent = val.rank;
     document.getElementById('ib-score').textContent = val.score;
     document.getElementById('ib-streak').textContent = val.streak;
-
-
-    
-    
-
-
 
 });
 }
