@@ -67,7 +67,7 @@ function Login({authorised}) {
             <div className="main">
                 <div className="content">
                     <div className="logo">
-                        <img src="" alt="logo img"></img>
+                        <img src="https://cdn-icons-png.flaticon.com/512/190/190942.png" alt="logo img"></img>
                     </div>
                     <div className="header">
                         <p className="title">

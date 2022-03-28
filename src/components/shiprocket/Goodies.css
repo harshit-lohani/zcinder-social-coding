@@ -19,6 +19,13 @@
     margin: 0 10px;
 }
 
+img{
+    height: 80%;
+    width: 80%;
+    margin: 10%;
+    object-fit: contain;
+}
+
 .goodies-data-container {
     margin: 2px 10px;
     font-size: 14px;
