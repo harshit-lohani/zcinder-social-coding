@@ -8,6 +8,7 @@ import NavBar from '../components/NavBar'
 import UserInfo from '../components/UserInfo/UserInfo'
 import './Profile.css'
 import ConnectedApps from '../components/ConnectedApps/ConnectedApps'
+import Goodies from '../components/ShipRocket/Goodies.js'
 
 function Profile({authorised}) {
 
@@ -26,7 +27,7 @@ function Profile({authorised}) {
         {/* <Friends /> */}
         {(page===0)?<UserInfo />:null}
         {(page===1)?<Friends />:null}
-        {(page===2)?<ConnectedApps />:null}
+        {(page===2)?<Goodies />:null}
 
       </div>
     </React.Fragment>
