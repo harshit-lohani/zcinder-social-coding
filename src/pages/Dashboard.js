@@ -16,7 +16,8 @@ import Layout from './Layout'
 function Dashboard({authorised}) {
   var user = JSON.parse(localStorage.getItem('userInfo'));
   var details = JSON.parse(localStorage.getItem('userDetails'));
- 
+  const [index,setIndex] = useState(0);
+  
   if(!authorised){
     return <Navigate to='/'/>
   }
