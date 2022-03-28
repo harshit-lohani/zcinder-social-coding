@@ -2,6 +2,17 @@ import codeforces from "../codeforces";
 
 var cf_handle = 'tourist';
 
+function codeforcesRAT(cf_handle){
+  let obj = codeforces(cf_handle);
+    var promise = Promise.resolve(obj);
+
+    promise.then(function(val) {
+      document.getElementById('cf-rating').textContent = val.rating;
+      document.getElementById('cf-rank').textContent = val.rank;
+    });
+
+}
+
 function codeforcesGET(cf_handle, contest_no) {
 
     let obj = codeforces(cf_handle);
@@ -12,7 +23,6 @@ function codeforcesGET(cf_handle, contest_no) {
         var no = 0;
 
         for(var c of val.contests){
-          console.log(c)
           no++;
         }
 
@@ -45,3 +55,4 @@ function codeforcesGET(cf_handle, contest_no) {
 }
 
 export default codeforcesGET;
+export { codeforcesRAT } ;

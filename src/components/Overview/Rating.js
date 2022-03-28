@@ -1,24 +1,32 @@
 import React from 'react'
 import './Rating.css'
+import codeforcesRAT from '../../API-Get/codeforcesGET'
+import leetcodeGET from '../../API-Get/leetcodeGET'
+import interviewbitGET from '../../API-Get/leetcodeGET'
 
 function Rating() {
+    codeforcesRAT('tourist');
+    // leetcodeGET('ishangarg09');
   return (
     <div className='rating-wrapper'>
         <div className='rating-header'>
-            Rating
+            Codeforces
         </div>
         <div className='rating-container'>
-            <div className='rating-label'>Codeforces</div>
-            <div className='rating-value'>1415 (+15)</div>
+            <div className='rating-label'>Rating</div>
+            <div className='rating-value'><span id='cf-rating'></span></div>
         </div>
         <div className='rating-container'>
-            <div className='rating-label'>Leetcode</div>
-            <div className='rating-value'>1415 (+15)</div>
+            <div className='rating-label'>Rank</div>
+            <div className='rating-value'><span id='cf-rank'></span></div>
         </div>
-        <div className='rating-container'>
-            <div className='rating-label'>InterviewBit</div>
-            <div className='rating-value'>1415 (+15)</div>
-        </div>
+        {/* <div className='rating-container'>
+            <div className='rating-label'>Leetcode Rank</div>
+            <div className='rating-value'><span id='lc-rank'></span></div>
+        </div> */}
+
+    
+        
     </div>
   )
 }
