@@ -5,8 +5,10 @@ import CFStats from '../components/Codeforces/CFStats'
 function CFPage() {
   return (
     <React.Fragment>
-      <CFStats />
-      <CFContestHistory />
+      <div className='display-flex-column'>
+        <CFStats />
+        <CFContestHistory />
+      </div>
     </React.Fragment>
   )
 }

@@ -49,3 +49,11 @@ button {
 body {
  margin: 0;
 }
+
+.display-flex-column{
+  display: flex;
+  flex-flow: row;
+  height: 80vh;
+  align-items: flex-start;
+  justify-content: center;
+}
