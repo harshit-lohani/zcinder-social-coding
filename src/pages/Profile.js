@@ -10,6 +10,8 @@ import './Profile.css'
 import ConnectedApps from '../components/ConnectedApps/ConnectedApps'
 
 function Profile({authorised}) {
+
+
   const [page,setPage] = useState(0)
   if(!authorised){
     return <Navigate to='/'/>
