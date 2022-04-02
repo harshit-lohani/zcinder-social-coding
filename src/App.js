@@ -5,6 +5,7 @@ import Login from './Login';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import Repositories from './components/Github/Repositories/Repositories';
+import LeaderBoard from './components/LeaderBoard/Leaderboard';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <Route exact path='/' element={<Login authorised={isAuthenticated}/>}/>
         <Route path = '/dashboard' element={<Dashboard authorised={isAuthenticated}/>}/>
         <Route path = '/profile' element={<Profile authorised={isAuthenticated} />}/>
-        <Route path = '/test' element={<Repositories/>} />
+        <Route path = '/test' element={<LeaderBoard/>} />
       </Routes>
     </div>
   );
