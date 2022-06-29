@@ -1,4 +1,4 @@
-# Social Coding
+# ZCinder - Social Coding
 
 This project is made as a part of AthenaSquare's ShipRocket Hackathon.
 Demo deployment: https://zcinder.herokuapp.com/
